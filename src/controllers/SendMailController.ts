@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { IMessage } from '../interfaces/IMailProvider';
 import { MailService } from '../services/MailService';
-import { MailtrapMailProvider } from '../providers/MailtrapMailProvider';
+import { NodemailerProvider } from '../providers/NodemailerProvider';
 
 import 'dotenv/config';
 
@@ -14,7 +14,7 @@ class SendMailController {
       email: process.env.MAIL_ADDRESS,
     };
 
-    const mailProvider = new MailtrapMailProvider();
+    const mailProvider = new NodemailerProvider();
 
     const mailService = new MailService(mailProvider);
 
