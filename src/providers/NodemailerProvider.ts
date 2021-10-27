@@ -4,7 +4,7 @@ import Mail from 'nodemailer/lib/mailer';
 
 import 'dotenv/config';
 
-class MailtrapMailProvider implements IMailProvider {
+class NodemailerProvider implements IMailProvider {
   private transporter: Mail;
 
   constructor() {
@@ -33,4 +33,4 @@ class MailtrapMailProvider implements IMailProvider {
   }
 }
 
-export { MailtrapMailProvider };
+export { NodemailerProvider };
